@@ -6,7 +6,7 @@ build/
 !**/src/test/**/build/
 
 # ignore properties file
-config.properties
+application.properties
 
 ### STS ###
 .apt_generated
