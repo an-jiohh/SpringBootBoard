@@ -21,7 +21,7 @@ public class QuestionCRUDTest {
         Question question = new Question();
         question.setSubject("멍충이는 왜 멍충이입니까");
         question.setContent("멍충이는 왜 멍충이 인지 궁금합니다.");
-        question.setCreate_date(LocalDateTime.now());
+        question.setCreateDate(LocalDateTime.now());
         questionRepository.save(question);
     }
 
