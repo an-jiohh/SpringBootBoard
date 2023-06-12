@@ -26,7 +26,7 @@ public class AnswerCRUDTest {
     void createAnswer(){  //CREATE
         Answer answer = new Answer();
         answer.setContent("당연합니다 멍충이 입니다.");
-        answer.setCreate_date(LocalDateTime.now());
+        answer.setCreateDate(LocalDateTime.now());
         Optional<Question> question = questionRepository.findById(1);
         if(question.isPresent()){
             answer.setQuestion(question.get());
