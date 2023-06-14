@@ -50,7 +50,7 @@ public class QuestionController {
             return "question_form";
         }
         SiteUser siteUser = userService.getUser(principal.getName());
-        questionService.create(questionForm.getSubject(), questionForm.getSubject(),siteUser);
+        questionService.create(questionForm.getSubject(), questionForm.getContent(),siteUser);
         return "redirect:/question/list";
     }
 }
