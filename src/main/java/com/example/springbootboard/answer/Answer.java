@@ -26,5 +26,5 @@ public class Answer {
     private Question question;
 
     @ManyToOne
-    private SiteUser siteUser;
+    private SiteUser author;
 }

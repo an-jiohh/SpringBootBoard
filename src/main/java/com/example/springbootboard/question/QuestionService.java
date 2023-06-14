@@ -38,12 +38,12 @@ public class QuestionService {
         }
     }
 
-    public void create(String subject, String content, SiteUser siteUser){
+    public void create(String subject, String content, SiteUser author){
         Question question = new Question();
         question.setSubject(subject);
         question.setContent(content);
         question.setCreateDate(LocalDateTime.now());
-        question.setSiteUser(siteUser);
+        question.setAuthor(author);
         questionRepository.save(question);
     }
 }
