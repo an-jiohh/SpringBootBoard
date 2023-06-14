@@ -1,6 +1,7 @@
 package com.example.springbootboard.question;
 
 import com.example.springbootboard.DataNotFoundException;
+import com.example.springbootboard.user.SiteUser;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +38,12 @@ public class QuestionService {
         }
     }
 
-    public void create(String subject, String content){
+    public void create(String subject, String content, SiteUser siteUser){
         Question question = new Question();
         question.setSubject(subject);
         question.setContent(content);
         question.setCreateDate(LocalDateTime.now());
+        question.setSiteUser(siteUser);
         questionRepository.save(question);
     }
 }
